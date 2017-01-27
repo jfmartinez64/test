@@ -4,7 +4,7 @@ from couchpotato.core.media.movie.providers.base import MovieProvider
 
 log = CPLog(__name__)
 
-autoload = 'cpasbien'
+autoload = 'torrent9'
 
 
 class cpasbien(MovieProvider, Base):
