@@ -18,7 +18,7 @@ class Base(TorrentProvider):
 
     urls = {
         'test': 'http://www.torrent9.biz/',
-        'search': 'http://www.torrent9.biz/recherche/',
+        'search': 'http://www.torrent9.biz/torrents_films.html',
     }
 
     http_time_between_calls = 1 #seconds
