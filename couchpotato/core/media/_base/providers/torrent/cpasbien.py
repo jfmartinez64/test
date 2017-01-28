@@ -18,7 +18,7 @@ class Base(TorrentProvider):
 
     urls = {
         'test': 'http://www.torrent9.biz/',
-        'search': 'http://www.torrent9.biz/torrents_films.html',
+        'search': 'http://www.torrent9.biz/search_torrent/',
     }
 
     http_time_between_calls = 1 #seconds
@@ -45,7 +45,7 @@ class Base(TorrentProvider):
 
         TitleStringReal = (getTitle(movie['info']) + ' ' + simplifyString(quality['identifier'] )).replace('-',' ').replace(' ',' ').replace(' ',' ').replace(' ',' ').encode("utf8")
         
-        URL = (self.urls['search']).encode('UTF8')
+        URL = (self.urls['search']).encode('UTF8').html
         URL=unicodedata.normalize('NFD',unicode(URL,"utf8","replace"))
         URL=URL.encode('ascii','ignore')
         URL = urllib2.quote(URL.encode('utf8'), ":/?=")
